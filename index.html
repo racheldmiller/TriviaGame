@@ -9,30 +9,38 @@
 </head>
 <body>
     <!-- in the example provided, "grid" is the name used for "container" -->
-    <div class="quiz"> 
-        <div class="countdown">
-            <!-- This is where I would include the the timer for how many seconds the user has left -->
-            <h3>Time Remaining:</h3>
-        </div>
+    <div class="container"> 
         <div id="quiz">
             <h1>Pulp Fiction Trivia Quiz</h1>
             <hr style="margin-top: 20px"> 
-        </div>
-       
-        <p id="question"></p>
 
-        <div class="buttons">
-            <button id="btn0"><span id="choice0"></span></button>
-            <button id="btn1"><span id="choice1"></span></button>
-            <button id="btn2"><span id="choice2"></span></button>
-            <button id="btn3"><span id="choice3"></span></button>
-            <button id="btn4"><span id="choice4"></span></button>
+            <div id="timer">
+                <h3>Time Remaining:</h3>
+            </div>
+
+            <!-- Should I make "question" a p id, or a div id? -->
+            <div id="question"></div>
+            <div id="answer"></div>
+            <div id="right"></div>
+            <div id="wrong"></div>
+            <div id="unanswered"></div>
+
+            <div class="choices">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <div id="startQuiz">
+                <button id="btn4">START QUIZ</button>
+            </div>
+
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Question x of y.</p>
+            </footer>
         </div>
-    
-        <hr style="margin-top: 50px">
-        <footer>
-            <p id="progress">Question x of y.</p>
-        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="assets/javascript/app.js"></script>

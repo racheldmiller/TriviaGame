@@ -18,14 +18,19 @@ var answers = [["a. 252 times", "b. 265 times", "c. 287 times", "d. 301 times"],
 // define correct answers for questions
 var correctAnswer = ["b", "d", "c", "a"];
 
+// user's guess is either right or wrong
+var rightGuesses = 0;
+var wrongGuesses = 0; 
+var unanswered = 0;
+
 // define variable for the timer
 var timer = 0; 
 
+// timer functionality 
+var intervalID;
+
 // then the game should start w/ 0.
 var score = 0; 
-
-// hold the current index of questions.
-var questionIndex = 0; 
 
 // ========================================= PROCESS ==========================================
 
@@ -34,14 +39,24 @@ var questionIndex = 0;
 
 $(document).ready(function() {
 
-    // create a function startGame() to start the game. 
+    //  When I click the button. it should start the trivia quiz.
+    $(document).on("click", "#startQuiz", startQuiz);
 
-    // Remember: everything in the initial state should be 0 or empty. 
+    // create a function startQuiz() to start the game. 
+    // Remember: everything in the initial state should be 0. 
 
-    // The timer should start running. 
+    function startQuiz() {
+        // $("#right").hide();
+        // $("#wrong").hide();
+        // $("#unanswered").hide();
+        rightGuesses = 0;
+        wrongGuesses = 0;
+        unanswered = 0; 
 
-    // If the timer starts running, the button should disappear and the question should display.
-
+        // The timer should start running.
+        // If the timer starts running, the button should disappear and the question should display.
+    }
+    
     // create a function nextQuestion() and have a for loop to generate the next question. 
 
     // create a function to update player stats. 
@@ -53,61 +68,3 @@ $(document).ready(function() {
         // if player runs out of time, they lose.
 
 });
-
-
-// create a function to render the question
-function renderQuestion() {
-
-    // if there's more questions, render the next one. 
-    if (questionIndex <= (questions.length-1)) {
-        document.querySelector("#question").innerHTML = questions[questionIndex].q;
-    }
-    // if there's no other questions, end the game.
-    else {
-        document.querySelector("#question").innerHTML = "Game Over!";
-        document.querySelector("#score").innerHTML = "Your score is " + score + " out of" + questions.length;
-       }
-};
-
-// Create a function to update the score 
-function updateScore() {
-    document.querySelector("#score").innerHTML = "Score: " + score; 
-};
-
-// // create a function to start the trivia session
-// $("#questions").click(chooseAnswer)
-
-// // create a for loop that'll loop through the questions 
-// for (i = 0; i < questions.length, i++)
-
-
-// they are a winner if they get through all of the questions without running out of time
-
-
-// loser if they run out of time OR if they answer a question incorrectly 
-
-// ===================================== MAIN PROCESS ==========================================
-
-// call on the function that you created previously 
-renderQuestion();
-updateScore();
-
-// When a user presses a key, it'll run this: 
-document.onkeyup = function(event) {
-    // if there's no more questions, stop the function.
-    if (questionIndex === questions.length) {
-        return;
-    }
-
-    // if the user guesses the right answer, increase their score.
-    if (userInput === questions[questionIndex].a) {
-        alert("Correct!");
-        score++;
-        updateScore();
-    }
-    // else { will have to define how to stop the game 
-    //     stopgame 
-    // }
-};
-
-// the user should be able to click on the answer 
