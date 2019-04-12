@@ -21,23 +21,38 @@ var correctAnswer = ["b", "d", "c", "a"];
 // define variable for the timer
 var timer = 0; 
 
-// If I choose to keep score, then the game should start w/ 0.
+// then the game should start w/ 0.
 var score = 0; 
 
 // hold the current index of questions.
 var questionIndex = 0; 
 
-// ================================= HELPER FUNCTIONS ==========================================
+// ========================================= PROCESS ==========================================
+
+// GOOD HOUSEKEEPING: Make sure that HTML div tags are created and represented.
+// Try to figure out where I can console.log stuff.
 
 $(document).ready(function() {
-    // insert code here 
 
+    // create a function startGame() to start the game. 
 
+    // Remember: everything in the initial state should be 0 or empty. 
 
+    // The timer should start running. 
 
+    // If the timer starts running, the button should disappear and the question should display.
+
+    // create a function nextQuestion() and have a for loop to generate the next question. 
+
+    // create a function to update player stats. 
+
+        // if a player guesses correctly...
+
+        // if player guesses incorrectly... 
+
+        // if player runs out of time, they lose.
 
 });
-
 
 
 // create a function to render the question
