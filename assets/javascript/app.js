@@ -1,6 +1,9 @@
 // ================================= GLOBAL VARIABLES ==========================================
 
 // define questions for the trivia game
+// INVESTIGATE: is this the best method to display the q & a? Or should I have it all in one array
+// i.e. then I can call on it with something like "qAndA.questions" "qAndA.answers"
+
 var questions = [
     "How many times is 'f*ck' used in Pulp Fiction?", 
     "How many days did Bruce Willis work on the film?", 
@@ -29,6 +32,9 @@ var timer = 0;
 // timer functionality 
 var intervalID;
 
+// INVESTIGATE: should I have an index of questions and answers? If so,
+var indexQandA = 0; 
+
 // then the game should start w/ 0.
 var score = 0; 
 
@@ -43,12 +49,15 @@ $(document).ready(function() {
     $(document).on("click", "#startQuiz", startQuiz);
 
     // create a function startQuiz() to start the game. 
-    // Remember: everything in the initial state should be 0. 
-
     function startQuiz() {
-        // $("#right").hide();
-        // $("#wrong").hide();
-        // $("#unanswered").hide();
+
+        console.log("are you ready?!") 
+        
+        // INVESTIGATE: I saw these jQuery stuff in other examples. Why is this necessary?
+        
+        $("#right").empty();
+        $("#wrong").empty();
+        $("unanswered").empty();
         rightGuesses = 0;
         wrongGuesses = 0;
         unanswered = 0; 
@@ -57,9 +66,16 @@ $(document).ready(function() {
         // If the timer starts running, the button should disappear and the question should display.
     }
     
-    // create a function nextQuestion() and have a for loop to generate the next question. 
+    // create a function nextQuestion() and have a for loop to generate the next question.
+        // the answers should be appended into the buttons 
+    function nextQuestion() {
+        for (i=0, i<questions.length, i++);
+    } 
+
+    nextQuestion();
 
     // create a function to update player stats. 
+    
 
         // if a player guesses correctly...
 

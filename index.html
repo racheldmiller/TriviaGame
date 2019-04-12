@@ -8,19 +8,28 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    <!-- in the example provided, "grid" is the name used for "container" -->
+
     <div class="container"> 
         <div id="quiz">
             <h1>Pulp Fiction Trivia Quiz</h1>
             <hr style="margin-top: 20px"> 
 
+            <div id="startQuiz">
+                <button id="btn4">START QUIZ</button>
+            </div>
+
+            <!-- Question / Answer section -->
             <div id="timer">
                 <h3>Time Remaining:</h3>
             </div>
-
-            <!-- Should I make "question" a p id, or a div id? -->
             <div id="question"></div>
             <div id="answer"></div>
+            
+            <!-- Display correct answer -->
+            <div id="message"></div>
+            <div id="correctedAnswer"></div>
+
+            <!-- Track Stats -->
             <div id="right"></div>
             <div id="wrong"></div>
             <div id="unanswered"></div>
@@ -30,10 +39,6 @@
                 <button id="btn1"><span id="choice1"></span></button>
                 <button id="btn2"><span id="choice2"></span></button>
                 <button id="btn3"><span id="choice3"></span></button>
-            </div>
-
-            <div id="startQuiz">
-                <button id="btn4">START QUIZ</button>
             </div>
 
             <hr style="margin-top: 50px">
