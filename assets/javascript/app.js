@@ -1,25 +1,26 @@
 // ================================= GLOBAL VARIABLES ==========================================
 
 // define questions for the trivia game
-// INVESTIGATE: is this the best method to display the q & a? Or should I have it all in one array
-// i.e. then I can call on it with something like "qAndA.questions" "qAndA.answers"
+// INVESTIGATE: is this the best method to display the q & a? 
 
-var questions = [
-    "How many times is 'f*ck' used in Pulp Fiction?", 
-    "How many days did Bruce Willis work on the film?", 
-    "This movie cost $8 million to make. How much of that money went to pay the actors' salaries?", 
-    "When John Travolta was reviving Uma Thurman's character, which two board games are seen in the background?"
-    ];
-
-// define answer options for users
-var answers = [["a. 252 times", "b. 265 times", "c. 287 times", "d. 301 times"],
-            ["a. 28 days", "b. 42 days", "c. 14 days", "d. 18 days"],
-            ["a. $6 million", "b. $4 million", "c. $5 million", "d. $8 million"],
-            ["a. Game of Life, Operation", "b. Monopoly, Game of Life", "c. Candyland, Operation", "d. Scrabble, Operation"]
-    ];
-
-// define correct answers for questions
-var correctAnswer = ["b", "d", "c", "a"];
+var triviaArray = [
+    { question: "How many times is 'f*ck' used in Pulp Fiction?", 
+    answers: ["a. 252 times", "b. 265 times", "c. 287 times", "d. 301 times"],
+    correctAnswer: "b"
+    },
+    { question: "How many days did Bruce Willis work on the film?", 
+    answers: ["a. 28 days", "b. 42 days", "c. 14 days", "d. 18 days"],
+    correctAnswer: "d"
+    },
+    { question: "This movie cost $8 million to make. How much of that money went to pay the actors' salaries?", 
+    answers: ["a. $6 million", "b. $4 million", "c. $5 million", "d. $8 million"],
+    correctAnswer: "c"
+    },
+    { question: "When John Travolta was reviving Uma Thurman's character, which two board games are seen in the background?",
+    answers:  ["a. Game of Life, Operation", "b. Monopoly, Game of Life", "c. Candyland, Operation", "d. Scrabble, Operation"],
+    correctAnswer: "a"
+    },
+];
 
 // user's guess is either right or wrong
 var rightGuesses = 0;
@@ -67,9 +68,11 @@ $(document).ready(function() {
     }
     
     // create a function nextQuestion() and have a for loop to generate the next question.
-        // the answers should be appended into the buttons 
     function nextQuestion() {
-        for (i=0, i<questions.length, i++);
+        var question = triviaArray[] // what should go into here? 
+        for (i=0, i<questions.length, i++); // should this line read i<triviaArray.length, or i<question.answers.length?
+        
+        $(".choices").append(triviaArray.answers) // how do I append answers into the buttons?
     } 
 
     nextQuestion();
@@ -84,3 +87,21 @@ $(document).ready(function() {
         // if player runs out of time, they lose.
 
 });
+
+
+// questions = [
+//     "How many times is 'f*ck' used in Pulp Fiction?", 
+//     "How many days did Bruce Willis work on the film?", 
+//     "This movie cost $8 million to make. How much of that money went to pay the actors' salaries?", 
+//     "When John Travolta was reviving Uma Thurman's character, which two board games are seen in the background?"
+//     ];
+
+// // define answer options for users
+// var answers = [["a. 252 times", "b. 265 times", "c. 287 times", "d. 301 times"],
+//             ["a. 28 days", "b. 42 days", "c. 14 days", "d. 18 days"],
+//             ["a. $6 million", "b. $4 million", "c. $5 million", "d. $8 million"],
+//             ["a. Game of Life, Operation", "b. Monopoly, Game of Life", "c. Candyland, Operation", "d. Scrabble, Operation"]
+//     ];
+
+// // define correct answers for questions
+// var correctAnswer = ["b", "d", "c", "a"];
