@@ -22,12 +22,9 @@ var triviaArray = [
     },
 ];
 
-// var indexQandA = 0;
-// var correct; 
-
-// user's guess is either right or wrong
-var rightGuesses = 0;
-var wrongGuesses = 0;
+// options for user's guess
+var correct = 0;
+var incorrect = 0;
 var unanswered = 0;
 
 // ========================================= PROCESS ==========================================
@@ -57,10 +54,19 @@ $(document).ready(function() {
     $("#start").on("click", quizClock.startTimer);
     $("#start").click(function(){
         $("#timer").show();
+
     });
 
-    // I was told I should use a for each loop since my general for loop didn't work.
-    // ... And I don't know how to do that. :( My overall for loop wouldn't work.
+    // does this actually work?  Need to test. Thanks to May for suggesting this! 
+    // for (var i=0; i<triviaArray.length; i++) {
+    //     $("#question").html(triviaArray[i].question);
+    //     for (var j = 0; j < triviaArray[i][answers].length; j++) {
+    //         console.log("it worked");
+    //     }
+    // };
+
+    // MY ORIGINAL FOR LOOP -- ONLY WAY I WAS ABLE TO GET THE Qs AND As TO PRINT ONTO THE SCREEN
+    // I was told I should use a for each loop... whatever that is. 
 
     $("#question").html(triviaArray[0].question);
     for (var i = 0; i < triviaArray[0].answers.length; i++) {
@@ -112,3 +118,26 @@ $(document).ready(function() {
         $("#answer").show();
         $("#timer").show();
     };
+
+// ========== PSUEDOCODING THE REST B/C I SPENT TOO MUCH TIME ON THE TIMER AND MY FOR LOOP =========================
+
+// create a function showImage() to show image after a player answers a question
+    // timer should stop when this happens 
+    // correct answer should also be displayed
+
+// create a function evaluateAnswer() to determine how the user's stats 
+    // clearInterval to stop the timer 
+    // if, else if, else statements 
+        // if = player guesses correctly 
+            // correct ++; 
+        // else if = player guesses incorrectly 
+            // incorrect ++; 
+        // else = player runs out of time/doesn't answer 
+            // unanswered ++; 
+
+// create a function results() to reset the quiz (need up update HTML to have a retry ID)
+    // $("#right").text("right guesses: " + rightGuesses);
+    // $("#wrong").text("wrong guesses: " + wrongGuesses);
+    // $("#unanswered").text("unanswered guesses: " + unanswered);
+    // $("#retry").show(); 
+    // $("#retry").click(startQuiz);
