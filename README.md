@@ -9,7 +9,7 @@
 <ul><li>Wouldn't print questions or answers onto the screen.</li>
   <li>Timer wasn't running.</li></ul>
 
-<h3>To-Do List of Investigation</h3>
+<h3>To-Do List for Investigating</h3>
 <ul><li>Make the answers clickable, and have the answers loop.</li>
   <li>Figure out why it defaults to displaying the last question in the loop.</li>
   <li>The timer doesn't stop at 0.</li>
