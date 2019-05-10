@@ -39,6 +39,7 @@ var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 
+var count = 0;
 // ========================================= PROCESS ==========================================
 
 var quizClock = {
@@ -63,17 +64,17 @@ var quizClock = {
 $(document).ready(function() {
   $("#start").click(startQuiz);
 
-  for (var i = 0; i < triviaArray.length; i++) {
-    var currentQuestion = triviaArray[i]; // store in variable b/c it'll represent the question that we're on
-    console.log(currentQuestion.question);
-    $("#question").html(currentQuestion.question);
+  // for (var i = 0; i < triviaArray.length; i++) {
+  //   var currentQuestion = triviaArray[i]; // store in variable b/c it'll represent the question that we're on
+  //   console.log(currentQuestion.question);
+  //   $("#question").html(currentQuestion.question);
 
-    var currentAnswers = currentQuestion.answers; // since each question has an answer array, we can access the answer properties from currentQuestion b/c currentQuestion is the object that we have
-    // for (var j = 0; j < currentAnswers.length; j++) {
-    //   console.log(currentAnswers[j]);
-    $("#answer").html(currentAnswers.join("<br>")); // need to investigate why answers aren't showing on the screen
-    // }
-  }
+  //   var currentAnswers = currentQuestion.answers; // since each question has an answer array, we can access the answer properties from currentQuestion b/c currentQuestion is the object that we have
+  //   // for (var j = 0; j < currentAnswers.length; j++) {
+  //   //   console.log(currentAnswers[j]);
+  //   $("#answer").html(currentAnswers.join("<br>")); // need to investigate why answers aren't showing on the screen
+  //   // }
+  // }
   // setQuestion(0);
   // List out everything that needs to be hidden before starting the quiz.
   $("#question").hide();
@@ -100,10 +101,52 @@ function startQuiz() {
   // whatever I hid, now I have to show it:
   $("#question").show();
   $(".choices").show();
-  $("#answer").show();
+  // $("#answer").show();
   $("#timer").show();
 
   quizClock.startTimer();
+
+  nextQuestion();
+}
+
+function nextQuestion() {
+  var currentQuestion = triviaArray[count]; // store in variable b/c it'll represent the question that we're on
+  console.log(currentQuestion.question);
+  $("#question").html(currentQuestion.question);
+
+  var currentAnswers = currentQuestion.answers; // since each question has an answer array, we can access the answer properties from currentQuestion b/c currentQuestion is the object that we have
+  for (var j = 0; j < currentAnswers.length; j++) {
+    //   console.log(currentAnswers[j]);
+    $("#answer").html(currentAnswers.join("<br>"));
+
+    $(".choices").append(
+      "<button type='button' id='test' class='choice list-group-item list-group-item-action'>" +
+        currentQuestion.answers[j] +
+        "</button>"
+    );
+  }
+}
+
+function evaluateAnswer() {
+  $(document).on("click", "#test", function() {
+    console.log("inside on click: ");
+    userGuess = $(this).text();
+
+    if (userGuess[0] === currentQuestion.correctAnswer) {
+      display.text("You are correct!");
+      nextQuestion();
+    }
+
+    // console.log("userGuess after click: " + userGuess);
+    // var display = $("<p>");
+    // display.text(
+    //     "you guessed " +
+    //         userGuess +
+    //         " the answer was " +
+    //         questionsArray[count].answer
+    // );
+    // $("#image").append(display);
+  });
 }
 
 // ========== PSUEDOCODING THE REST B/C I SPENT TOO MUCH TIME ON THE TIMER AND MY FOR LOOP =========================
@@ -138,3 +181,18 @@ function startQuiz() {
 //   $("#choice2").html(currentAnswers[2]);
 //   $("#choice3").html(currentAnswers[3]);
 // }
+
+// ------
+// $(document).on("click", "#test", function() {
+//   console.log("inside on click: ");
+//   userGuess = $(this).text();
+//   // console.log("userGuess after click: " + userGuess);
+//   var display = $("<p>");
+//   display.text(
+//       "you guessed " +
+//           userGuess +
+//           " the answer was " +
+//           questionsArray[count].answer
+//   );
+//   $("#image").append(display);
+// });
