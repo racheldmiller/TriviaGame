@@ -3,7 +3,7 @@ A simple trivia game that has timer functionality. Originally, I attempted to go
 
 <h2>Live Link</h2>
 Click <a href="https://racheldmiller.github.io/TriviaGame/">here</a> to try this out yourself! 
-** IMPORTANT ** I noticed that the github.io link isn't working properly? So I did a Zoom recording of me doing this locally. Please watch the <a href="https://youtu.be/rQwAUQBFYZk">YOUTUBE DEMO</a>!!! 
+<br>** IMPORTANT ** I noticed that the github.io link isn't working properly? So I did a Zoom recording of me doing this locally. Please watch the <a href="https://youtu.be/rQwAUQBFYZk">YOUTUBE DEMO</a>!!! 
 
 <h2>Technologies Used</h2> 
 HTML | CSS | JavaScript | jQuery
