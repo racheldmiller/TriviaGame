@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Trivia Game</title>
+    <title>Pulp Fiction Trivia Game</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,49 +13,28 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
+
   <body>
-    <div class="container">
-      <div id="quiz">
-        <h1>Pulp Fiction Trivia Quiz</h1>
-        <hr style="margin-top: 20px" />
-
-        <div id="startQuiz">
-          <button id="btn4">START QUIZ</button>
+    <div id="container">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">How Well Do You Know Pulp Fiction?</h1>
+        <!-- The subContainer div contains HTML elements that are added/removed throughout the app -->
+        <div id="subContainer">
+          <h3>Test Your Knowledge!</h3>
+          <div id="quizArea">
+            <!-- When clicked, Start button disappears and is replaced w/ questions + answers -->
+            <button class="btn btn-primary" id="start">Start Quiz</button>
+            <!-- After, display how many Qs were answered correctly/incorrectly/unanswered  -->
+          </div>
         </div>
-
-        <!-- Question / Answer section -->
-        <div id="timer">
-          <!-- <h3>Time Remaining:</h3> -->
-        </div>
-        <div id="question"></div>
-        <div id="answer"></div>
-
-        <!-- Display correct answer -->
-        <div id="message"></div>
-        <div id="correctedAnswer"></div>
-
-        <!-- Track Stats -->
-        <div id="right"></div>
-        <div id="wrong"></div>
-        <div id="unanswered"></div>
-
-        <div class="choices">
-          <!-- insert bootstrap buttons in here -->
-        </div>
-
-        <hr style="margin-top: 50px" />
-        <footer>
-          <p id="progress">Question x of y.</p>
-        </footer>
       </div>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="assets/javascript/app.js"></script>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
-
-<!-- the example put the questions into an ID
-<div class="questions">
-   This is where I'd place the questions and the different answer options -->
-<!-- </div> -->

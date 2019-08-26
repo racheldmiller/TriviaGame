@@ -1,16 +1,23 @@
 # TriviaGame
-A trivia game that has timer functionality. Built using Javascript and jQuery.
 
-Small victories:
-Was able to get the start button to hide and display the question & answer options. (I have a nice background image of Samuel L. Jackson and John Travolta... it doesn't look like it's appearing when I go to my github.io. However, you can see the image in my image folder).
+A simple trivia game that has timer functionality. Originally, I attempted to go the more challenging route, but I ended up deferring to radio buttons. Online tutorials have been incredibly helpful in me pulling this together.
 
-Struggles: 
-My original for loop (which should've looped through the different questionas and answers I created) did not work. It would not print any questions or answers onto the screen. What I found, however, is if I isolated an individual element, it worked. For presentation purposes, I left it as that. 
+<h2>Live Link</h2>
+Click <a href="https://racheldmiller.github.io/TriviaGame/">here</a> to try this out yourself!
 
-I worked with my tutor, who told me I should consider a for each loop. I looked at a lot of resources online, and I cannot figure out how to create a for each loop. 
+<h2>Technologies Used</h2> 
+HTML | CSS | JavaScript | jQuery
 
-My timer does not work at all. I worked with Randall on Friday afternoon to talk through our codes. She tried to help me with my timer, but we couldn't figure out why it's not working. We thought maybe it's hidden, but even after switching it to .show(), it's still not working. 
+<h2>Small Victories/Challenges During my Initial Commit:</h2>
+<ul><li>Start button worked. That's about it.</li>
+<li>Clicking an answer didn't lead into the next question.</li>
+<li>Finally got timer to work (but it would go into the negatives).</li>
+</ul>
 
-I will definitely be throwing this into the backlog of assignments I need regraded :'(
+<h2>Resources</h2>
+John Travolta/Samuel L. Jackson artwork is from Google.
 
-
+<h2>Learn More About Me!</h2>
+<ul><li><a href="https://linkedin.com/in/rachel-d-miller/">LinkedIn</a> 
+<li><a href="https://github.com/racheldmiller/">GitHub</a> 
+</ul>
