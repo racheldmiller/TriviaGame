@@ -1,11 +1,9 @@
 # TriviaGame
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rQwAUQBFYZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 A simple trivia game that has timer functionality. Originally, I attempted to go the more challenging route, but I ended up deferring to radio buttons. Online tutorials have been incredibly helpful in me pulling this together.
 
 <h2>Live Link</h2>
-Click <a href="https://racheldmiller.github.io/TriviaGame/">here</a> to try this out yourself!
+Click <a href="https://racheldmiller.github.io/TriviaGame/">here</a> to try this out yourself! 
+** IMPORTANT ** I noticed that the github.io link isn't working properly? So I did a Zoom recording of me doing this locally. Please watch the <a href="https://youtu.be/rQwAUQBFYZk">YOUTUBE DEMO</a>!!! 
 
 <h2>Technologies Used</h2> 
 HTML | CSS | JavaScript | jQuery
